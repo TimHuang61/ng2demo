@@ -1,0 +1,54 @@
+<p>
+  three-directives works!
+</p>
+<div>
+  <h3>*ngIf demo</h3>
+  <div *ngIf="isCheck">
+    isCheck is true, then shows this dom
+  </div>
+  <div *ngIf="name == 'Tim'">
+    If name is Tim , shows this dom.
+  </div>
+  <div *ngIf="getName() == 'Tim'">
+    If value of getName method is Tim , shows this dom.
+  </div>
+  <div *ngIf="isNullOrEmptyByInput(null)">
+    123
+  </div>
+  <div *ngIf="isNullOrEmptyByInput('QQ')">
+    {{result}}
+  </div>
+</div>
+
+<div>
+  <h3>[ngSwitch] demo</h3>
+  <input type="text" value="" [(ngModel)]="name">
+  <div [ngSwitch]="name">
+    <div *ngSwitchCase="'Tim'">{{name}}</div>
+    <div *ngSwitchCase="'LuLu'">{{name}}</div>
+    <div *ngSwitchCase="'Elton'">{{name}}</div>
+    <div *ngSwitchCase="'Jason'">{{name}}</div>
+    <div *ngSwitchDefault>Others</div>
+  </div>
+</div>
+
+<div>
+  <h3>*ngFor demo</h3>
+  <div *ngFor="let item of getDemoList()">
+    <div>{{item}}</div>
+  </div>
+</div>
+<div>
+  <h3>[ngStyle] demo</h3>
+  <div [ngStyle]="{'color':showColor('red')}">
+    demo ngStyle
+  </div>
+  <div [style.color]="'blue'">
+    demo ngStyle
+  </div>
+</div>
+<div>
+  <h3>[ngClass] demo</h3>
+  <div [ngClass]="{demoColor:true}">demo ngClass</div>
+  <div [class.demoColor2]="'true'">demo ngClass</div>
+</div>

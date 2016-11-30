@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { TestShowComponent } from './test-show/test-show.component';
+import { ThreeDirectivesComponent } from './three-directives/three-directives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestShowComponent
+    ThreeDirectivesComponent
   ],
   imports: [
     BrowserModule,
